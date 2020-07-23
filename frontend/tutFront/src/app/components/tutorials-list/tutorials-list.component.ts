@@ -13,8 +13,6 @@ export class TutorialsListComponent implements OnInit {
   currentTutorial = null;
   currentIndex = -1;
   title = '';
-  model: NgbDateStruct;
-  date: {year: number, month: number};
 
   constructor(private tutorialService: TutorialService) { }
 

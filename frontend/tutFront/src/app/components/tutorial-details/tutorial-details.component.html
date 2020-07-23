@@ -11,8 +11,7 @@
           name="title"
         />
       </div>
-      <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
-
+     
       <div class="form-group">
         <label for="description">Description</label>
         <input
@@ -40,8 +39,7 @@
     <button
       *ngIf="!currentTutorial.published"
       class="badge badge-primary mr-2"
-      (click)="updatePublished(true)"
-    >
+      (click)="updatePublished(true)">
       Publish
     </button>
   

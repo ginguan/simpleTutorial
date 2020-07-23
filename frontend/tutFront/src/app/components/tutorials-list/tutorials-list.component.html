@@ -35,8 +35,7 @@
         Remove All
       </button>
     </div>
-    <mdb-date-picker name="mydate" [options]="myDatePickerOptions" [placeholder]="'Selected date'" [(ngModel)]="model"
-  required></mdb-date-picker>
+    
     <div class="col-md-6">
       <div *ngIf="currentTutorial">
         <h4>Tutorial</h4>
@@ -51,10 +50,12 @@
           <label><strong>Status:</strong></label>
           {{ currentTutorial.published ? "Published" : "Pending" }}
         </div>
-  
-        <a class="badge badge-warning" href="/tutorials/{{ currentTutorial.id }}">
+
+    <a class="badge badge-warning" href="tutorials/{{ currentTutorial._id }}">
           Edit
         </a>
+
+   
       </div>
   
       <div *ngIf="!currentTutorial">
