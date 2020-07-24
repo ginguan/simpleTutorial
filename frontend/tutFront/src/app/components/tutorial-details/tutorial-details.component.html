@@ -27,10 +27,7 @@
         <label><strong>Status:</strong></label>
         {{ currentTutorial.published ? "Published" : "Pending" }}
       </div>
-      <div class="form-group">
-        <label><strong>id:</strong></label>
-      <div class="hidden">23333</div>
-      </div>
+
     </form>
   
     <button
@@ -59,5 +56,5 @@
   
   <div *ngIf="!currentTutorial">
     <br />
-    <p>Cannot access this Tutorial...</p>
+    <p>Cannot access to the Tutorial...</p>
   </div>
