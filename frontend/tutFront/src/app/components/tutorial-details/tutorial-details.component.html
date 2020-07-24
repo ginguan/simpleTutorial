@@ -2,7 +2,7 @@
     <h4>Tutorial</h4>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title"><strong>Title</strong></label>
         <input
           type="text"
           class="form-control"
@@ -13,7 +13,7 @@
       </div>
      
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description"><strong>Description</strong></label>
         <input
           type="text"
           class="form-control"
@@ -26,6 +26,10 @@
       <div class="form-group">
         <label><strong>Status:</strong></label>
         {{ currentTutorial.published ? "Published" : "Pending" }}
+      </div>
+      <div class="form-group">
+        <label><strong>id:</strong></label>
+      <div class="hidden">23333</div>
       </div>
     </form>
   

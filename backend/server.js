@@ -35,7 +35,7 @@ db.mongoose
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Gin's." });
+  res.json({ message: "Route check: port 8080 you should go to port 8081" });
 });
 //include routes 
 require("./routes/tutorial.routes")(app);

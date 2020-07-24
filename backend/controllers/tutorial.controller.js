@@ -14,6 +14,30 @@ exports.create = (req, res) => {
       title: req.body.title,
       description: req.body.description,
       published: req.body.published ? req.body.published : false
+      /*
+      //Define database Schema
+      var Item = new ItemSchema(
+        { img: 
+        { data: Buffer, contentType: String }
+      }
+      );
+      var Item = mongoose.model('Clothes',ItemSchema);
+      //using the middleware Multer to upload the photo on the server side.
+
+      app.use(multer({ dest: ‘./uploads/’,
+      rename: function (fieldname, filename) {
+      return filename;
+      },
+      }));
+      //post req to our db
+
+      app.post(‘/api/photo’,function(req,res){
+      var newItem = new Item();
+      newItem.img.data = fs.readFileSync(req.files.userPhoto.path)
+      newItem.img.contentType = ‘image/png’;
+      newItem.save();
+      });
+       */
     });
   
     // Save Tutorial in the database

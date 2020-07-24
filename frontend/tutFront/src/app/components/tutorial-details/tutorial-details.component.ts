@@ -21,8 +21,8 @@ export class TutorialDetailsComponent implements OnInit {
     this.getTutorial(this.route.snapshot.paramMap.get('id'));
   }
 
-  getTutorial(id) {
-    this.tutorialService.get(id)
+  getTutorial(_id) {
+    this.tutorialService.get(_id)
       .subscribe(
         data => {
           this.currentTutorial = data;
@@ -40,7 +40,7 @@ export class TutorialDetailsComponent implements OnInit {
       published: status
     };
 
-    this.tutorialService.update(this.currentTutorial.id, data)
+    this.tutorialService.update(this.currentTutorial._id, data)
       .subscribe(
         response => {
           this.currentTutorial.published = status;
@@ -52,7 +52,7 @@ export class TutorialDetailsComponent implements OnInit {
   }
 
   updateTutorial() {
-    this.tutorialService.update(this.currentTutorial.id, this.currentTutorial)
+    this.tutorialService.update(this.currentTutorial._id, this.currentTutorial)
       .subscribe(
         response => {
           console.log(response);
@@ -64,7 +64,7 @@ export class TutorialDetailsComponent implements OnInit {
   }
 
   deleteTutorial() {
-    this.tutorialService.delete(this.currentTutorial.id)
+    this.tutorialService.delete(this.currentTutorial._id)
       .subscribe(
         response => {
           console.log(response);
